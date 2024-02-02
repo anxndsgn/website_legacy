@@ -84,7 +84,7 @@ function Project({ project }) {
   if (project.link) {
     link = project.link;
   } else {
-    link = "#";
+    link = null;
   }
   return (
     <a
