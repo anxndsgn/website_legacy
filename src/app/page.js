@@ -1,12 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import { projectData } from "./projects";
-import { Bodoni_Moda } from "next/font/google";
-
-const bodoni = Bodoni_Moda({
-  weight: "400",
-  subsets: ["latin"],
-});
+import Header from "@/componets/header";
+import BG from "@/componets/bg";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -15,30 +12,8 @@ export default function Home() {
       <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 gap-6 m-auto w-10/12 items-start relative">
         <About />
         <Projects />
-        <div className="h-svh w-svw fixed top-0 left-0 z-[-1]">
-          <img
-            src="/bg.svg"
-            alt=""
-            className=" fixed top-0 left-0 -translate-x-1/2 -translate-y-1/2  scale-125"
-          />
-          <img
-            src="/bg.svg"
-            alt=""
-            className=" fixed bottom-0 right-0 translate-x-1/2 translate-y-1/2 scale-125"
-          />
-        </div>
       </div>
-    </div>
-  );
-}
-
-function Header() {
-  return (
-    <div
-      className={`flex flex-row m-auto w-10/12 place-content-between my-10 md:my-16 text-2xl md:text-3xl lg:text-5xl ${bodoni.className}`}
-    >
-      <div>about</div>
-      <div>projects</div>
+      <BG />
     </div>
   );
 }
@@ -46,11 +21,14 @@ function Header() {
 function About() {
   return (
     <div className="hidden  md:col-span-2 md:flex flex-col lg:col-span-2 md:text-base lg:text-xl font-light gap-10">
-      <img
-        src="/about.png"
-        alt=""
-        className=" w-24 lg:w-32 hover:-rotate-12 hover:scale-105 transition-all "
-      />
+      <Link href="/about">
+        <img
+          src="/about.png"
+          alt=""
+          className=" w-24 lg:w-32 hover:-rotate-12 hover:scale-105 transition-all "
+        />
+      </Link>
+
       <div>
         👋 Hi, I am{" "}
         <a
