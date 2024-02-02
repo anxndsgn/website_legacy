@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="relative mb-10">
       <Header />
-      <div className="grid grid-cols-2 md:grid-cols-6 gap-6 m-auto w-10/12 items-start relative">
+      <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 gap-6 m-auto w-10/12 items-start relative">
         <About />
         <Projects />
         <div className="h-svh w-svw fixed top-0 left-0 z-[-1]">
@@ -71,7 +71,7 @@ function About() {
 
 function Projects() {
   return (
-    <div className=" col-span-2 md:col-span-4 grid grid-cols-subgrid gap-y-5">
+    <div className=" col-span-2 md:col-span-3 lg:col-span-4 grid grid-cols-subgrid gap-y-5">
       {projectData.map((project) => (
         <Project project={project} key={project.projectName} />
       ))}
