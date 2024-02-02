@@ -10,7 +10,7 @@ export function Header({ isAbout = false }) {
   if (isAbout) {
     return (
       <header
-        className={`flex flex-row m-auto w-10/12 place-content-between my-10 md:my-16 text-2xl md:text-3xl lg:text-5xl ${bodoni.className}`}
+        className={`sticky top-10 flex flex-row m-auto w-10/12 place-content-between mb-20 z-10 text-2xl md:text-3xl lg:text-5xl ${bodoni.className}`}
       >
         <h1>about</h1>
         <Link href="/">
@@ -22,7 +22,7 @@ export function Header({ isAbout = false }) {
 
   return (
     <div
-      className={`flex flex-row m-auto w-10/12 place-content-between my-10 md:my-16 text-2xl md:text-3xl lg:text-5xl ${bodoni.className}`}
+      className={`sticky top-10 flex flex-row m-auto w-10/12 place-content-between mb-20 z-10 text-2xl md:text-3xl lg:text-5xl ${bodoni.className}`}
     >
       <Link href="/about">
         <h1 className="italic md:not-italic underline md:no-underline">
