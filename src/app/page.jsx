@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image";
-import { projectData } from "./projects";
-import Header from "@/componets/header";
-import BG from "@/componets/bg";
+import { projectData } from "../projects";
+import { Header } from "@/components/header";
+import BG from "@/components/bg";
 import Link from "next/link";
 
 export default function Home() {

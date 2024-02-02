@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
-import { projectData } from "@/app/projects";
-import Header from "@/componets/header";
-import BG from "@/componets/bg";
+import { projectData } from "../../projects";
+import { Header } from "@/components/header";
+import BG from "@/components/bg";
 
-export default function Home() {
+export default function About() {
   return (
     <div>
       <Header isAbout={true} />
