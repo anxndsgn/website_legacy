@@ -17,7 +17,7 @@ export default function About() {
         />
         {/* <h1 className="italic md:not-italic underline">projects</h1> */}
         <section className="grid grid-cols-2">
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <p className="text-4xl">👋</p>
             <p>
               <span> Hi, I am </span>
@@ -33,12 +33,13 @@ export default function About() {
             <p>Postgraduate in Industrial Design Engineering</p>
             <p>Researching in HCI {"(Human-Computer Interaction)"}. </p>
             <p>
-              As a designer, I am interested in design engineering, Design Ops
-              and design systems, which I call Design for Development {"(DfD)"}.
+              As a human interface designer, I am interested in design
+              engineering, design ops and design systems, which I call{" "}
+              {'"Design for Development (DfD)"'}.
             </p>
             <p>
               And I have always made natural, intuitive design my first
-              principle, of course, and good looks.
+              principle, and, of course, with good looks.
             </p>
             {/* <p>
               The word design to me represents the purposeful creation of human

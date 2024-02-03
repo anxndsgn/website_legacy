@@ -32,15 +32,15 @@ function About() {
         👋 Hi, I am{" "}
         <a
           href="https://twitter.com/anxndsgn"
-          className="italic border-b-2"
+          className="underline"
           target="_blank"
         >
           Xin
         </a>{" "}
-        <br />
-        Postgraduate in Industrial Design Engineering. <br />
-        I just love making beautiful things. <br />
-        Design for fun.
+        .<p>Postgraduate in Industrial Design Engineering. </p>
+        <p>Multidisciplinary.</p>
+        <p>Familar with Figma/PS/Rhino/Fusion 360/Keyshot/Kicad.</p>
+        <p>Learning JavaScript, React and Python.</p>
       </div>
     </div>
   );
