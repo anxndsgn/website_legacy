@@ -72,7 +72,7 @@ function Project({ project }) {
       <img
         src={project.img}
         alt=""
-        className=" w-full h-full aspect-square object-cover hover:rounded-se-[8rem] transition-all"
+        className=" w-full h-full aspect-square object-cover hover:rounded-se-[50%] transition-all"
       />
       <div className="text-base lg:text-xl font-light">
         {project.projectName}

@@ -9,27 +9,44 @@ export default function About() {
     <div>
       <Header isAbout={true} />
 
-      <div className="w-10/12 m-auto text-xl font-light flex flex-col gap-7">
+      <div className="w-10/12 m-auto text-lg font-light flex flex-col gap-7 mb-10">
         <img
           src="/about.png"
           alt=""
-          className=" w-24 lg:w-32 hover:-rotate-12 hover:scale-105 transition-all col-span-6 "
+          className=" w-24 lg:w-32 hover:-rotate-12 hover:scale-105 transition-all "
         />
         {/* <h1 className="italic md:not-italic underline">projects</h1> */}
-        <section>
-          <p className="text-4xl">👋</p>
-          <span> Hi, I am </span>
-          <a
-            href="https://twitter.com/anxndsgn"
-            className="underline"
-            target="_blank"
-          >
-            Xin
-          </a>
-          <br />
-          Postgraduate in Industrial Design Engineering <br />
-          I just love making beautiful things. <br />
-          Design for fun.
+        <section className="grid grid-cols-2">
+          <div>
+            <p className="text-4xl">👋</p>
+            <p>
+              <span> Hi, I am </span>
+              <a
+                href="https://twitter.com/anxndsgn"
+                className="underline"
+                target="_blank"
+              >
+                Xin
+              </a>
+            </p>
+
+            <p>Postgraduate in Industrial Design Engineering</p>
+            <p>Researching in HCI {"(Human-Computer Interaction)"}. </p>
+            <p>
+              As a designer, I am interested in design engineering, Design Ops
+              and design systems, which I call Design for Development {"(DfD)"}.
+            </p>
+            <p>
+              And I have always made natural, intuitive design my first
+              principle, of course, and good looks.
+            </p>
+            {/* <p>
+              The word design to me represents the purposeful creation of human
+              beings, which can be as small as looking good and communicating
+              information better, or as large as developing a system or a set of
+              rules.
+            </p> */}
+          </div>
         </section>
       </div>
       <BG />
