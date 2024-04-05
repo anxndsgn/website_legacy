@@ -6,30 +6,35 @@ const bodoni = Bodoni_Moda({
   subsets: ["latin"],
 });
 
-export function Header({ isAbout = false }) {
-  if (isAbout) {
-    return (
-      <header
-        className={`sticky top-10 flex flex-row m-auto w-10/12 place-content-between mb-20 z-10 text-2xl md:text-3xl lg:text-5xl ${bodoni.className}`}
-      >
-        <h1>about</h1>
-        <Link href="/">
-          <h1 className="italic underline">projects</h1>
-        </Link>
-      </header>
-    );
-  }
-
+export function Header({
+  leftTitle = `about`,
+  leftLink = `/about`,
+  rightTitle = `projects`,
+  rightLink = `/`,
+}) {
   return (
     <div
-      className={`sticky top-10 flex flex-row m-auto w-10/12 place-content-between mb-20 z-10 text-2xl md:text-3xl lg:text-5xl ${bodoni.className}`}
+      className={`sticky top-10 flex flex-row m-auto w-10/12 place-content-between mb-20 z-10 text-2xl md:text-3xl lg:text-5xl ${bodoni.className} transition-all`}
     >
-      <Link href="/about">
-        <h1 className="italic md:not-italic underline md:no-underline">
-          about
-        </h1>
-      </Link>
-      <h1>projects</h1>
+      {leftLink ? (
+        <Link href={leftLink}>
+          <h1 className="italic  underline hover:text-lime-400 ">
+            {leftTitle}
+          </h1>
+        </Link>
+      ) : (
+        <h1>{leftTitle}</h1>
+      )}
+
+      {rightLink ? (
+        <Link href={rightLink}>
+          <h1 className="italic  underline hover:text-lime-400">
+            {rightTitle}
+          </h1>
+        </Link>
+      ) : (
+        <h1>{rightTitle}</h1>
+      )}
     </div>
   );
 }

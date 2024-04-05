@@ -1,13 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
-import { projectData } from "../../projects";
+import { projectData } from "@/DATA/projectData";
 import { Header } from "@/components/header";
-import BG from "@/components/bg";
 
 export default function About() {
   return (
     <div>
-      <Header isAbout={true} />
+      <Header leftTitle={"back"} leftLink={"/"} rightTitle={""} />
 
       <div className="w-10/12 m-auto text-lg font-light flex flex-col gap-7 mb-10">
         <img
@@ -50,7 +49,6 @@ export default function About() {
           </div>
         </section>
       </div>
-      <BG />
     </div>
   );
 }
